@@ -53,6 +53,7 @@ p {
   .wrapper {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     width: 64.44444444vw;
     border-radius: 36px;
     padding: 1.5rem 1.5rem 1.5rem 0;
@@ -72,6 +73,7 @@ p {
 }
 @media (min-width: 82.5em) {
   .wrapper__card {
+    margin-top: calc(97px - 1.5rem);
     margin-inline: auto;
     width: clamp(200px, 26.111111vw, 500px);
     min-width: inherit;

@@ -12,6 +12,7 @@
     @media(min-width: $query-width) {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         width: 64.44444444vw;
         border-radius: 36px;
         padding: $spacing-450 $spacing-450 $spacing-450 0;
@@ -32,6 +33,7 @@
         }
 
         @media(min-width: $query-width) {
+            margin-top: calc(97px - $spacing-450);
             margin-inline: auto;
             width: clamp(200px, 26.111111vw, 500px);
             min-width: inherit;
@@ -50,6 +52,8 @@
             h2 {
                 margin-top: $spacing-300;
                 @include m.text-body;
+
+               
             }
         }
 
