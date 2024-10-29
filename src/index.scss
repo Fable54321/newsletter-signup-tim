@@ -1,0 +1,17 @@
+@use "./styles/abstracts/reset";
+@use "./styles/abstracts/variables" as *;
+@use "./styles/abstracts/mixins" as m;
+@use "./styles/components/Home";
+@use "./styles/components/Success";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $clr-neutral-700;
+
+    @media(max-width: $query-small){
+        background-color: $clr-neutral-100;
+    }
+    
+}

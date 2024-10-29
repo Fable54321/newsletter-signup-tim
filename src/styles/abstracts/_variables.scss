@@ -1,0 +1,42 @@
+/* colors */
+
+$clr-neutral-100: hsl(0,0%,100%);
+$clr-neutral-300: hsl(231, 7%, 60%);
+$clr-neutral-500: hsl(235, 18%, 26%);
+$clr-neutral-700: hsl(234, 29%, 20%);
+
+
+$clr-accent-200: hsl(2, 100%, 95%);
+$clr-accent-300: hsl(14, 100%, 61%);
+$clr-accent-400: hsl(346 100% 66%);
+
+
+/*typography */
+
+$fs-body: 1rem;
+$fs-heading: 2.5rem;
+$fs-heading-desktop: 3.5rem;
+$fs-form: 0.75rem;
+
+$ff-primary: "Roboto", "Sans-Serif";
+$ff-secondary: "Roboto", "Sans-Serif";
+
+$fw-heading: 700;
+$fw-body: 400;
+$fw-btn: 700;
+$fw-label: 700;
+
+/*spacing*/
+
+$spacing-100: .4rem;
+$spacing-200: .8rem;
+$spacing-300: 1.1rem;
+$spacing-400: 1.35rem;
+$spacing-450: 1.5rem;
+$spacing-500: 2rem;
+
+
+/*media query*/
+
+$query-width: 82.5em;
+$query-small: 25em;

@@ -1,0 +1,291 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit; /* Get rid of all font sizes and heights */
+}
+
+html {
+  color-scheme: dark light; /* Default dark */
+  hanging-punctuation: first last; /* Not supported in Chrome */
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Media responsive */
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty; /* Prevents orphans on lines */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+/* colors */
+/*typography */
+/*spacing*/
+/*media query*/
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+@media (min-width: 82.5em) {
+  .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 64.44444444vw;
+    border-radius: 36px;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+  }
+}
+.wrapper__card {
+  margin-top: 2rem;
+  max-width: 87.2vw;
+  min-width: min(70vw, 449px);
+  margin-inline: auto;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+@media (max-width: 25em) {
+  .wrapper__card {
+    padding: 0;
+  }
+}
+@media (min-width: 82.5em) {
+  .wrapper__card {
+    margin-inline: auto;
+    width: clamp(200px, 26.111111vw, 500px);
+    min-width: inherit;
+    padding: 0;
+  }
+}
+.wrapper__card__header h1 {
+  font-family: "Roboto", "Sans-Serif";
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+@media (min-width: 82.5em) {
+  .wrapper__card__header h1 {
+    font-size: 3.5rem;
+  }
+}
+.wrapper__card__header h2 {
+  margin-top: 1.1rem;
+  color: hsl(234, 29%, 20%);
+  font-family: "Roboto", "Sans-Serif";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+.wrapper__card__list {
+  color: hsl(234, 29%, 20%);
+  font-family: "Roboto", "Sans-Serif";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+  margin-top: 1.1rem;
+}
+.wrapper__card__list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.wrapper__card__list__list-items {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+.wrapper__card__list__list-items p {
+  vertical-align: top;
+}
+.wrapper__card__form {
+  margin-top: 2rem;
+}
+.wrapper__card__form form:valid {
+  background: none;
+}
+.wrapper__card__form form:valid p {
+  display: none;
+}
+.wrapper__card__form form p {
+  color: hsl(346, 100%, 66%);
+}
+.wrapper__card__form form label {
+  font-family: "Roboto", "Sans-Serif";
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: hsl(234, 29%, 20%);
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper__card__form form input {
+  margin-top: 0.4rem;
+  display: block;
+  color: hsl(234, 29%, 20%);
+  font-family: "Roboto", "Sans-Serif";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 1.5rem;
+  border: 1px solid hsla(243, 28%, 13%, 0.25);
+}
+.wrapper__card__form form input:valid, .wrapper__card__form form input :focus:valid {
+  border: none;
+  outline: 1px solid green;
+  background-color: hsl(94, 45%, 89%);
+}
+.wrapper__card__form form input:invalid, .wrapper__card__form form input :focus:invalid {
+  background-color: hsl(2, 100%, 95%);
+  border: none;
+  outline: solid 1px hsl(14, 100%, 61%);
+}
+.wrapper__card__form form button {
+  margin-top: 1.35rem;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Roboto", "Sans-Serif";
+  font-weight: 700;
+  min-height: 56px;
+  width: 100%;
+  padding: 1rem;
+}
+.wrapper__card__form form button:hover {
+  cursor: pointer;
+  background: linear-gradient(hsl(14, 100%, 61%), hsl(346, 100%, 66%));
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 2px 1px 0 hsl(4, 63%, 64%), 0px 5px 10px 0px hsl(4, 64%, 79%), 0px 10px 20px 0px hsla(4, 64%, 79%, 0.75), 0px 20px 20px 0px hsla(4, 64%, 79%, 0.55);
+}
+.wrapper__card__img {
+  width: 100%;
+}
+@media (min-width: 82.5em) {
+  .wrapper__card__img {
+    width: auto;
+  }
+}
+.wrapper__card__img img {
+  border-radius: 10px;
+  width: 100%;
+}
+@media (min-width: 82.5em) {
+  .wrapper__card__img img {
+    border-radius: none;
+  }
+}
+
+.success-wrapper {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  height: 100vh;
+  flex-direction: column;
+  padding-inline: 1.5rem;
+  max-width: 375px;
+}
+@media (min-width: 82.5em) {
+  .success-wrapper {
+    max-width: 504px;
+    max-height: 520px;
+    border-radius: 36px;
+    padding-inline: 64px;
+  }
+}
+.success-wrapper__card {
+  margin-top: 149px;
+}
+@media (min-width: 82.5em) {
+  .success-wrapper__card {
+    margin-top: 48px;
+  }
+}
+.success-wrapper__card h1 {
+  margin-top: 40px;
+  font-family: "Roboto", "Sans-Serif";
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+@media (min-width: 82.5em) {
+  .success-wrapper__card h1 {
+    font-size: 3.5rem;
+  }
+}
+.success-wrapper__card p {
+  margin-top: 1.5rem;
+  color: hsl(234, 29%, 20%);
+  font-family: "Roboto", "Sans-Serif";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+.success-wrapper__card button {
+  margin-top: 263px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Roboto", "Sans-Serif";
+  font-weight: 700;
+  min-height: 56px;
+  padding: 0.8rem;
+  width: 100%;
+}
+@media (min-width: 82.5em) {
+  .success-wrapper__card button {
+    margin-top: 40px;
+  }
+}
+.success-wrapper__card button:hover {
+  cursor: pointer;
+  background: linear-gradient(hsl(14, 100%, 61%), hsl(346, 100%, 66%));
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 2px 1px 0 hsl(4, 63%, 64%), 0px 5px 10px 0px hsl(4, 64%, 79%), 0px 10px 20px 0px hsla(4, 64%, 79%, 0.75), 0px 20px 20px 0px hsla(4, 64%, 79%, 0.55);
+}
+.success-wrapper__card__email {
+  font-weight: 700;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(234, 29%, 20%);
+}
+@media (max-width: 25em) {
+  body {
+    background-color: hsl(0, 0%, 100%);
+  }
+}/*# sourceMappingURL=index.css.map */
